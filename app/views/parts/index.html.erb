@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h2 class="center-text">PARTS CURRENTLY AVAILABLE</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Part Number</th>
+      <th>Year</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Name</th>
+      <th>Condition</th>
+      <th>Price</th>
+      <th>Img</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parts.each do |part| %>
+      <tr>
+        <td class="bold-data"><%= "%05d" % part.id %></td>
+        <td><%= part.year %></td>
+        <td><%= part.make %></td>
+        <td><%= part.model %></td>
+        <td><%= part.name %></td>
+        <td><%= part.condition %></td>
+        <td><%= '%.2f' % part.price %></td>
+        <td><img class="tiny-thumb" src="<%= part.imgurl %>" alt=""> </td>
+        <td><%= link_to 'Show Part Info', part %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

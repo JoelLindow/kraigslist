@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KraigsCarParts</title>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+</head>
+
+<body>
+  <div class="button button-outline">
+
+    <%= link_to 'GO TO PARTS LIST', parts_that_are_available_path %>
+  </div>
+
+<div class="header-area">
+  <marquee>USE YOUR BROWSER'S 'FIND' FEATURE TO SEARCH THIS DATABASE OF PARTS. THIS LIST IS UPDATED DAILY.</marquee>
+  <p class="center-text">SEE A PART YOU ARE INTERESTED IN? TEXT OR CALL <strong>(720)276-1450</strong></p>
+  <p class="center-text">We do installation, part replacement and other automotive mechanical work at VERY reasonable rates in the South Denver area.</p>
+</div>
+
+  <%= yield %>
+</body>
+</html>

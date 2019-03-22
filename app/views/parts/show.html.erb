@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1><%= @part.name + " from a " + @part.year.to_s + " - " + @part.make + " " + @part.model%></h1>
+</p>
+
+<h3>
+  <strong>Part Description:</strong>
+  <h5><%= @part.description %></h5>
+</h3>
+
+<h3>
+  <strong>Condition:</strong>
+  <%= @part.condition %>
+</h3>
+
+<h3>
+  <strong>Price:</strong>
+  <%= "$" + ('%.2f' % @part.price).to_s %>
+</h3>
+
+<p>
+  <strong>Part Image:</strong>
+  <br>
+  <img src="<%= @part.imgurl %>" class="show-img" alt="">
+</p>
